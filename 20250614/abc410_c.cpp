@@ -42,7 +42,7 @@ int main()
             ll a, b;
             cin >> a >> b;
 
-            sequence.at(a - 1) = b;
+            sequence.at((cur + a - 1) % N) = b;
 
             break;
         case 2:
