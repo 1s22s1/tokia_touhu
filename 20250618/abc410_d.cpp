@@ -69,8 +69,7 @@ int main()
     cin >> N >> M;
 
     vector<vector<pair<int, int>>> g(N);
-
-    rep(i, N)
+    rep(i, M)
     {
         int a, b, w;
         cin >> a >> b >> w;
