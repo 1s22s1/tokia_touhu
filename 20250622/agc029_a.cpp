@@ -21,34 +21,14 @@ int main()
     string S;
     cin >> S;
 
-    vector<int> white_indexes, black_indexes;
-
-    int white_count = count(S.begin(), S.end(), 'W');
-    int black_count = S.size() - white_count;
+    int answer = 0;
 
     rep(i, S.size())
     {
         if (S.at(i) == 'W')
         {
-            if (white_count <= i)
-            {
-                white_indexes.push_back(i);
-            }
+            answer += count(S.begin(), S.begin() + i, 'B');
         }
-        else
-        {
-            if (i < white_count)
-            {
-                black_indexes.push_back(i);
-            }
-        }
-    }
-
-    int answer = 0;
-
-    rep(i, white_indexes.size())
-    {
-        answer += abs(white_indexes.at(i) - black_indexes.at(i));
     }
 
     cout << answer << endl;
