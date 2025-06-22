@@ -4,7 +4,7 @@ using namespace std;
 
 #define endl '\n'
 #define ll long long
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep(i, n) for (ll i = 0; i < (int)(n); i++)
 
 int init()
 {
@@ -21,13 +21,18 @@ int main()
     string S;
     cin >> S;
 
-    int answer = 0;
+    ll answer = 0;
+    ll black_count = 0;
 
     rep(i, S.size())
     {
         if (S.at(i) == 'W')
         {
-            answer += count(S.begin(), S.begin() + i, 'B');
+            answer += black_count;
+        }
+        else
+        {
+            black_count++;
         }
     }
 
