@@ -4,7 +4,8 @@
         "array": "cpp",
         "string_view": "cpp",
         "stacktrace": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
