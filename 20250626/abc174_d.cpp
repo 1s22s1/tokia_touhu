@@ -18,22 +18,21 @@ int main()
 {
     init();
 
-    vector<ll> vector(3);
+    ll N;
+    string S;
 
-    rep(i, 3)
+    cin >> N >> S;
+
+    ll red_count = count(S.begin(), S.end(), 'R');
+
+    ll answer = 0;
+
+    for (int i = 0; i < red_count; i++)
     {
-        cin >> vector.at(i);
-    }
-
-    sort(vector.begin(), vector.end(), greater<ll>());
-
-    ll diff = abs(vector.at(0) - vector.at(1)) + abs(vector.at(0) - vector.at(2));
-
-    ll answer = diff / 2;
-
-    if (diff % 2 == 1)
-    {
-        answer += 2;
+        if (S.at(i) == 'W')
+        {
+            answer++;
+        }
     }
 
     cout << answer << endl;
